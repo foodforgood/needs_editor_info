@@ -1,0 +1,6 @@
+---
+title: 保良局田家炳千禧小學
+extra_breadcrumbs:
+  - title: 2016-2017
+    url: ../../2016-2017
+---

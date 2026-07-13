@@ -1,0 +1,6 @@
+---
+title: 明愛香港崇德社幼兒學校
+extra_breadcrumbs:
+  - title: 2017-2018
+    url: ../../2017-2018
+---

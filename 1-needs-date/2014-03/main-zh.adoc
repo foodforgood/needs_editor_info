@@ -1,0 +1,6 @@
+---
+title: 東華三院邱子田紀念中學
+extra_breadcrumbs:
+  - title: 2014-2015
+    url: ../../2014-2015
+---

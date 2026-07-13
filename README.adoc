@@ -1,0 +1,59 @@
+=_needs_editor_info/
+
+Legacy Joomla material that *could not be auto-migrated* to the new Astro
+`posts/` collection because required metadata is missing. Editors need to fill
+in the gaps before dev can complete migration.
+
+This folder is auto-skipped by the migration script
+(`scripts/migrate-to-unified-posts.ts:278`) due to the `_` prefix — dirs
+placed here will not appear on the live site until moved out.
+
+=Origin note (2026-07-06)
+
+The `1-needs-date/` subdirs and the three `YYYY-NN` subdirs in
+`2-needs-content/` (`2017-128`, `2017-154`, `2017-158`) were moved here
+from the legacy `PENDING_CAMPUS_NO_DATE/` directory at the site-content
+root. After verifying each subdir was byte-for-byte identical to its
+destination copy (file count + md5 set match on all 23 dirs), the source
+`PENDING_CAMPUS_NO_DATE/` folder was deleted. Three loose root-level
+orphan photos in that folder (`WhatsApp Image 2022-01-24 at
+12.48.51.jpeg`, `e6ff6490-...jfif`, `f32afe63-...jfif`) had no matching
+article context and were discarded as no longer needed.
+
+=Origin note: campus_gallery (2026-07-06)
+
+The 30 subdirs in `2-needs-content/` with full-date names
+(`YYYY-MM-DD-id-2017-XXX`) were moved here from `campus_gallery/` at the
+site-content root. After verifying each of the 30 subdirs had a
+byte-identical copy in `2-needs-content/` (file count + md5 match on all
+203 photos), the source `campus_gallery/` folder was deleted.
+
+=Categories
+
+| Subdir              Count | What's missing                                  Origin                                      |
+| ------------------- ----- | ----------------------------------------------- ------------------------------------------- |
+| [`1-needs-date/`]   20    | Publication date only (adoc + photos present)   `PENDING_CAMPUS_NO_DATE/` (adoc-bearing)    |
+| [`2-needs-content/`] 33   | Title + body (photos only; 3 also missing date) `campus_gallery/` (30) + PENDING photo-only (3) |
+
+[`1-needs-date/`]: ./1-needs-date/
+[`2-needs-content/`]: ./2-needs-content/
+
+=Process
+
+1. *Editor* — open each subdir, fill in the missing fields per the
+   subdir's README. Photos stay where they are.
+2. *Editor* — notify dev when a batch is ready (or when all done).
+3. *Dev* — run `npx tsx scripts/migrate-to-unified-posts.ts` to move
+   completed dirs into `posts/`.
+4. *Dev* — delete the migrated dir from `_needs_editor_info/` once it
+   lands in `posts/`.
+
+=Conventions preserved
+
+- Photos stay in their original layout (loose in the subdir, or under
+  `photos/` if already organised that way).
+- Joomla legacy IDs (`legacy.id`, `legacy.asset_id`) are preserved in
+  frontmatter for cross-referencing with the old site.
+- Academic-year breadcrumb context (`extra_breadcrumbs: ../../2017-2018`)
+  in `1-needs-date/` adocs is preserved — useful for grouping related
+  school visits by academic year.

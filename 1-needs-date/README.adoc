@@ -1,0 +1,79 @@
+=1-needs-date/
+
+Each subdir contains a `main-zh.adoc` with title and academic-year
+breadcrumbs, plus photos. The dir name is in `YYYY-NN` format
+(year + sequence number from the old Joomla archive) — **not a real
+publication date**.
+
+The adoc body and photos are fine. Only the date is missing.
+
+=Action required
+
+For each subdir, *rename the folder* to `YYYY-MM-DD-<descriptive-slug>`
+using the actual event date.
+
+Example: `2017-26/` (contains 荃灣商會學校) →
+`2017-09-15-tsuen-wan-trading-association-school/`
+
+=Where to find the date
+
+In priority order:
+
+1. *Inside the adoc body* — sometimes the date is mentioned in the
+   title or first paragraph.
+2. *`legacy.meta.created`* in the existing frontmatter — this is the
+   Joomla import timestamp, often close to (but not exactly) the event
+   date. Use only if no better source.
+3. *`extra_breadcrumbs`* academic year — narrows the range (e.g.,
+   `2017-2018` means Sep 2017 – Aug 2018).
+4. *Photo EXIF* — if the photos were taken on the day of the event,
+   EXIF timestamps may give the exact date. Ask dev if you need help
+   reading EXIF.
+5. *Colleague memory / school records* — for school visits, the
+   school may have a record of the visit date.
+
+=If only month/year is known
+
+Use `YYYY-MM-01` and add a note in the adoc body:
+`<!-- date approximate: known to be September 2017 -->`
+
+=Alternative (if renaming is impractical)
+
+Add a `date` field to the frontmatter of each `main-zh.adoc`:
+
+```yaml
+---
+title: 荃灣商會學校
+date: 2017-09-15          # ← add this line
+extra_breadcrumbs:
+  - title: 2017-2018
+    url: ../../2017-2018
+---
+```
+
+Dev will handle the rename on the dev side.
+
+=Tracking
+
+Mark each dir as you complete it by editing this file.
+
+- [ ] 2013-09
+- [ ] 2014-03
+- [ ] 2015-15
+- [ ] 2016-22
+- [ ] 2016-39
+- [ ] 2016-42
+- [ ] 2016-67
+- [ ] 2017-01
+- [ ] 2017-02
+- [ ] 2017-04
+- [ ] 2017-05
+- [ ] 2017-07
+- [ ] 2017-09
+- [ ] 2017-13
+- [ ] 2017-26
+- [ ] 2017-34
+- [ ] 2017-35
+- [ ] 2017-37
+- [ ] 2017-49
+- [ ] 2017-66

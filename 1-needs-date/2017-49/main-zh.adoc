@@ -1,0 +1,6 @@
+---
+title: Mori Lisa International Kindergarten
+extra_breadcrumbs:
+  - title: 2017-2018
+    url: ../../2017-2018
+---

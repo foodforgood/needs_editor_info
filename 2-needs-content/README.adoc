@@ -1,0 +1,75 @@
+=2-needs-content/
+
+Each subdir contains *only photos* — no article text. Editors need to
+create a `main-zh.adoc` with at minimum a `title`. A short body paragraph
+is recommended (1–3 sentences) but optional.
+
+=Two flavours
+
+=A. Date known (30 dirs, names start with a full date)
+
+Dir names follow `YYYY-MM-DD-id-2017-XXX` — origin: `campus_gallery/`.
+The date in the dir name is reliable. *Only title/body needed.*
+
+=B. Date also missing (3 dirs, names are `YYYY-NN`)
+
+| Dir       Notes                        |
+| --------- ---------------------------- |
+| 2017-128  Photos only, no date, no title |
+| 2017-154  Photos only, no date, no title |
+| 2017-158  Photos only, no date, no title |
+
+For these three: *rename to `YYYY-MM-DD-<slug>` AND create `main-zh.adoc`.*
+Same date-discovery process as [`1-needs-date/`](../1-needs-date/).
+
+=Template — `main-zh.adoc`
+
+Create this file at the root of each subdir (alongside the photos).
+
+```yaml
+---
+title: <活動名稱，例如：荃灣商會學校參觀齊惜福油塘社區廚房>
+published: true
+illo_folder: .
+tags:
+  facilities:
+    - kitchen-yau-tong
+  services:
+    - community-kitchen
+  topics: []
+---
+<一段簡短描述（1–3句）。例如：>
+荃灣商會學校師生於2017年9月29日參觀齊惜福油塘社區廚房，了解食物回收
+及減廢工作，並親身參與食材處理過程。
+```
+
+Notes on the template:
+
+- `illo_folder: .` means photos are in the same dir as the adoc. If you
+  prefer to move them into a `photos/` subfolder, change this to
+  `illo_folder: photos`.
+- For `facilities`, use one of: `kitchen-yau-tong`, `kitchen-kwai-tsing`,
+  `kitchen-tung-tau`, `kitchen-on-yam`. If the event was at a non-kitchen
+  facility, ask dev for the correct slug.
+- For `services`, use a recognised service slug (e.g.
+  `community-kitchen`, `food-rescue`, `education-truck`). Ask dev if
+  unsure.
+- `topics` can be left as `[]` or include tags like `press-coverage`,
+  `volunteer-feature`, etc.
+
+=What to write in the body
+
+If you have no information beyond the photos themselves, a minimal
+factual description is fine:
+
+> XX機構於YYYY年MM月DD日到訪齊惜福YY設施參觀。
+
+Avoid fabricating details (headcount, schedule, names) that aren't
+visible in the photos or known from records.
+
+=Translation
+
+Dev will generate `main-cn.adoc` (simplified Chinese) and `main-en.adoc`
+(English) from your `main-zh.adoc`. If you can provide those directly,
+great — but only the zh version is strictly required to unblock
+migration.
