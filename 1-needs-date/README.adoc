@@ -1,4 +1,4 @@
-=1-needs-date/
+= 1-needs-date
 
 Each subdir contains a `main-zh.adoc` with title and academic-year
 breadcrumbs, plus photos. The dir name is in `YYYY-NN` format
@@ -7,7 +7,7 @@ publication date**.
 
 The adoc body and photos are fine. Only the date is missing.
 
-=Action required
+== Action required
 
 For each subdir, *rename the folder* to `YYYY-MM-DD-<descriptive-slug>`
 using the actual event date.
@@ -15,7 +15,7 @@ using the actual event date.
 Example: `2017-26/` (contains 荃灣商會學校) →
 `2017-09-15-tsuen-wan-trading-association-school/`
 
-=Where to find the date
+== Where to find the date
 
 In priority order:
 
@@ -32,12 +32,12 @@ In priority order:
 5. *Colleague memory / school records* — for school visits, the
    school may have a record of the visit date.
 
-=If only month/year is known
+== If only month/year is known
 
 Use `YYYY-MM-01` and add a note in the adoc body:
 `<!-- date approximate: known to be September 2017 -->`
 
-=Alternative (if renaming is impractical)
+== Alternative (if renaming is impractical)
 
 Add a `date` field to the frontmatter of each `main-zh.adoc`:
 
@@ -53,7 +53,7 @@ extra_breadcrumbs:
 
 Dev will handle the rename on the dev side.
 
-=Tracking
+== Tracking
 
 Mark each dir as you complete it by editing this file.
 
