@@ -1,28 +1,29 @@
-=2-needs-content/
+= 2-needs-content
 
 Each subdir contains *only photos* — no article text. Editors need to
 create a `main-zh.adoc` with at minimum a `title`. A short body paragraph
 is recommended (1–3 sentences) but optional.
 
-=Two flavours
+== Two flavours
 
-=A. Date known (30 dirs, names start with a full date)
+=== A. Date known (30 dirs, names start with a full date)
 
 Dir names follow `YYYY-MM-DD-id-2017-XXX` — origin: `campus_gallery/`.
 The date in the dir name is reliable. *Only title/body needed.*
 
-=B. Date also missing (3 dirs, names are `YYYY-NN`)
+=== B. Date also missing (3 dirs, names are `YYYY-NN`)
 
-| Dir       Notes                        |
-| --------- ---------------------------- |
-| 2017-128  Photos only, no date, no title |
-| 2017-154  Photos only, no date, no title |
-| 2017-158  Photos only, no date, no title |
+|===
+| Dir | Notes
+| 2017-128 | Photos only, no date, no title
+| 2017-154 | Photos only, no date, no title
+| 2017-158 | Photos only, no date, no title
+|===
 
 For these three: *rename to `YYYY-MM-DD-<slug>` AND create `main-zh.adoc`.*
 Same date-discovery process as [`1-needs-date/`](../1-needs-date/).
 
-=Template — `main-zh.adoc`
+== Template — `main-zh.adoc`
 
 Create this file at the root of each subdir (alongside the photos).
 
@@ -57,7 +58,7 @@ Notes on the template:
 - `topics` can be left as `[]` or include tags like `press-coverage`,
   `volunteer-feature`, etc.
 
-=What to write in the body
+== What to write in the body
 
 If you have no information beyond the photos themselves, a minimal
 factual description is fine:
@@ -67,7 +68,7 @@ factual description is fine:
 Avoid fabricating details (headcount, schedule, names) that aren't
 visible in the photos or known from records.
 
-=Translation
+== Translation
 
 Dev will generate `main-cn.adoc` (simplified Chinese) and `main-en.adoc`
 (English) from your `main-zh.adoc`. If you can provide those directly,
