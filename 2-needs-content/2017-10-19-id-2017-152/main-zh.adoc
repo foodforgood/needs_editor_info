@@ -1,0 +1,10 @@
+---
+title: 種植課
+published: true
+illo_folder: .
+tags:
+  facilities: []
+  services: []
+  topics:
+    - school-visit
+---
